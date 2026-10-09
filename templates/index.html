@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><title>BRIAN BANK WEB</title>
+<style>
+body{font-family:Arial;background:#f0f2f5;margin:0}
+.header{background:#00a651;color:white;padding:15px;text-align:center;font-size:22px;font-weight:bold}
+.card{background:white;margin:12px;padding:12px;border-radius:10px;box-shadow:0 2px 4px #aaa}
+.green{background:#00a651;color:white;border:none;padding:8px 15px;border-radius:5px}
+input,select{padding:8px;margin:4px;border:1px solid #ccc;border-radius:5px}
+</style></head><body>
+<div class="header">🏦 BRIAN BANK - WEB<br><small>{{count}} Accounts | {{total}} KES</small></div>
+<div class="card"><h3>ALL ACCOUNTS</h3>
+{% for n,a in accounts.items() %}<b>{{n}}</b> - {{a.balance}} KES | {{a.type}}<br>{% endfor %}
+</div>
+<div class="card"><h3>CREATE</h3>
+<form action="/create" method="post">
+<input name="name" placeholder="Name" required>
+<input name="pin" placeholder="PIN" required>
+<select name="type"><option value="normal">Normal</option><option value="savings">Savings</option></select>
+<button class="green">CREATE</button></form></div>
+<div class="card"><h3>DEPOSIT</h3>
+<form action="/deposit" method="post">
+<input name="name" placeholder="Name" required>
+<input name="amount" type="number" placeholder="Amount" required>
+<button class="green">DEPOSIT</button></form></div>
+<div class="card"><h3>SEND</h3>
+<form action="/send" method="post">
+<input name="sender" placeholder="From" required>
+<input name="receiver" placeholder="To" required>
+<input name="amount" type="number" placeholder="Amount" required>
+<button class="green">SEND</button></form></div>
+<div class="card" style="background:#222;color:white;text-align:center">CEO BRIAN - WOTE TO WORLD</div>
+</body></html>
