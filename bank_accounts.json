@@ -1,0 +1,38 @@
+{
+  "Brian": {
+    "pin": "1234",
+    "balance": 4000,
+    "loan": 0,
+    "transactions": [
+      "Account opened with 5000 KES",
+      "Sent 1000 KES to Mama",
+      "Sent 500 KES to Mama",
+      "Deposited 1000",
+      "Sent 500 to Mama"
+    ],
+    "type": "normal"
+  },
+  "Mama": {
+    "pin": "0000",
+    "balance": 7000,
+    "loan": 0,
+    "transactions": [
+      "Account opened with 5000 KES",
+      "Received 1000 KES from Brian",
+      "Received 500 KES from Brian",
+      "Received 500 from Brian"
+    ],
+    "type": "normal"
+  },
+  "TestSavings": {
+    "pin": "1111",
+    "balance": 11000,
+    "loan": 5000,
+    "transactions": [
+      "Account opened with 5000 KES",
+      "LOAN +5000 KES - Debt 5000",
+      "INTEREST +1000 KES (10%) - New 11000"
+    ],
+    "type": "savings"
+  }
+}
